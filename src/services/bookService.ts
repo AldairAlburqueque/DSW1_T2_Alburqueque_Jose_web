@@ -17,8 +17,12 @@ export const bookService = {
     return response.data;
   },
 
-  // Ejemplo de método extra que podrías agregar luego
-  // update: async (id: number, data: UpdateBookDto): Promise<Book> => { ... },
-  // delete: async (id: number): Promise<void> => { ... },
-};
+  update: async (id: number, data: CreateBook): Promise<Book> => {
+    const response = await api.put(`/books/${id}`, data);
+    return response.data;
+  },
 
+  remove: async (id: number): Promise<void> => {
+    await api.delete(`/books/${id}`);
+  },
+};
