@@ -4,7 +4,7 @@ export interface Book {
   author: string;
   isbn: string;
   stock: number;
-  createdAt: string; // o Date si prefieres mapearlo
+  createdAt: string;
 }
 
 export interface CreateBook {
@@ -18,8 +18,8 @@ export interface Loan {
   id: number;
   bookId: number;
   studentName: string;
-  loanDate: string; // o Date
-  returnDate?: string | null; // opcional
+  loanDate: string;
+  returnDate?: string | null;
   status: string;
 }
 

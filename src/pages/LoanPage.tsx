@@ -52,7 +52,7 @@ const LoansPage = () => {
       showMessage('success', 'Préstamo registrado');
       setFormData({ bookId: 0, studentName: '' });
       loadLoans();
-      loadBooks(); // actualizar stock
+      loadBooks();
     } catch (err: any) {
       showMessage('error', err.response?.data?.message || 'Error al registrar préstamo');
     }
@@ -63,7 +63,7 @@ const LoansPage = () => {
       await loanService.returnLoan(id);
       showMessage('success', 'Préstamo devuelto');
       loadLoans();
-      loadBooks(); // actualizar stock
+      loadBooks();
     } catch (err: any) {
       showMessage('error', err.response?.data?.message || 'Error al devolver préstamo');
     }
